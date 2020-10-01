@@ -1,6 +1,6 @@
 # Minesweeper
 A functional minesweeper engine where you can change the number of rows, columns, and mines.
-![alt text]https://i.imgur.com/fWJXki3.png
+![Tool Image](https://i.imgur.com/fWJXki3.png)
 
 ## How to use
 The tool initially generates an int[] containing every integer from 1 to n (n depends on the # of elements, set to the 6th tick by default), and randomize the order of its elements. The green rectangles above the input panel is the visual representation of this array. The user can edit the # of elements, as well as the speed of the sort, then click on one of the six sorting algorithms to begin the sort. 
