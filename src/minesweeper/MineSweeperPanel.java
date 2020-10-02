@@ -282,65 +282,65 @@ public class MineSweeperPanel extends JPanel {
 	}
 
 	private void openImages() {
-		try {
-			URL url = getClass().getResource("res/images/unclicked.png");
-			unClickedSquare = ImageIO.read(url);
-			url = getClass().getResource("res/images/flagged.png");
-			flaggedSquare = ImageIO.read(url);
-			url = getClass().getResource("res/images/Number 1.PNG");
-			one = ImageIO.read(url);
-			url = getClass().getResource("res/images/Number 2.PNG");
-			two = ImageIO.read(url);
-			url = getClass().getResource("res/images/Number 3.PNG");
-			three = ImageIO.read(url);
-			url = getClass().getResource("res/images/Number 4.PNG");
-			four = ImageIO.read(url);
-			url = getClass().getResource("res/images/Number 5.PNG");
-			five = ImageIO.read(url);
-			url = getClass().getResource("res/images/Number 6.PNG");
-			six = ImageIO.read(url);
-			url = getClass().getResource("res/images/Number 7.PNG");
-			seven = ImageIO.read(url);
-			url = getClass().getResource("res/images/Number 8.PNG");
-			eight = ImageIO.read(url);
-			url = getClass().getResource("res/images/clicked.png");
-			clickedSquare = ImageIO.read(url);
-			url = getClass().getResource("res/images/redmine.png");
-			redmine = ImageIO.read(url);
-			url = getClass().getResource("res/images/mine.png");
-			mine = ImageIO.read(url);
-			url = getClass().getResource("res/images/nomine.png");
-			nomine = ImageIO.read(url);
-			url = getClass().getResource("res/images/smiley.png");
-			smiley = ImageIO.read(url);
-			url = getClass().getResource("res/images/deadsmiley.png");
-			deadsmiley = ImageIO.read(url);
-			url = getClass().getResource("res/images/sunglassessmiley.png");
-			sunglasses= ImageIO.read(url);
-			url = getClass().getResource("res/images/displayone.PNG");
-			displayone = ImageIO.read(url);
-			url = getClass().getResource("res/images/displaytwo.PNG");
-			displaytwo = ImageIO.read(url);
-			url = getClass().getResource("res/images/displaythree.PNG");
-			displaythree = ImageIO.read(url);
-			url = getClass().getResource("res/images/displayfour.PNG");
-			displayfour = ImageIO.read(url);
-			url = getClass().getResource("res/images/displayfive.PNG");
-			displayfive = ImageIO.read(url);
-			url = getClass().getResource("res/images/displaysix.PNG");
-			displaysix = ImageIO.read(url);
-			url = getClass().getResource("res/images/displayseven.PNG");
-			displayseven = ImageIO.read(url);
-			url = getClass().getResource("res/images/displayeight.PNG");
-			displayeight = ImageIO.read(url);
-			url = getClass().getResource("res/images/displaynine.PNG");
-			displaynine = ImageIO.read(url);
-			url = getClass().getResource("res/images/displayzero.PNG");
-			displayzero = ImageIO.read(url);
-		} catch (IOException e) {
-			System.out.println("Problem opening images");
-			e.printStackTrace();
-		}
+		
+			ImageIcon Icon = new ImageIcon(getClass().getClassLoader().getResource("unclicked.png"));
+			unClickedSquare = Icon.getImage();
+			
+			Icon = new ImageIcon(getClass().getClassLoader().getResource("flagged.png"));
+			flaggedSquare= Icon.getImage();
+			Icon = new ImageIcon(getClass().getClassLoader().getResource("Number 1.PNG"));
+			one= Icon.getImage();
+			
+			Icon = new ImageIcon(getClass().getClassLoader().getResource("Number 2.PNG"));
+			two= Icon.getImage();
+			Icon = new ImageIcon(getClass().getClassLoader().getResource("Number 3.PNG"));
+			three= Icon.getImage();
+			Icon = new ImageIcon(getClass().getClassLoader().getResource("Number 4.PNG"));
+			four= Icon.getImage();
+			Icon = new ImageIcon(getClass().getClassLoader().getResource("Number 5.PNG"));
+			five= Icon.getImage();
+			Icon = new ImageIcon(getClass().getClassLoader().getResource("Number 6.PNG"));
+			six= Icon.getImage();
+			Icon = new ImageIcon(getClass().getClassLoader().getResource("Number 7.PNG"));
+			seven= Icon.getImage();
+			Icon = new ImageIcon(getClass().getClassLoader().getResource("Number 8.PNG"));
+			eight= Icon.getImage();
+			Icon = new ImageIcon(getClass().getClassLoader().getResource("clicked.png"));
+			clickedSquare= Icon.getImage();
+			Icon = new ImageIcon(getClass().getClassLoader().getResource("redmine.png"));
+			redmine= Icon.getImage();
+			Icon = new ImageIcon(getClass().getClassLoader().getResource("mine.png"));
+			mine= Icon.getImage();
+			
+			Icon = new ImageIcon(getClass().getClassLoader().getResource("nomine.png"));
+			nomine= Icon.getImage();
+			Icon = new ImageIcon(getClass().getClassLoader().getResource("smiley.png"));
+			smiley= Icon.getImage();
+			Icon = new ImageIcon(getClass().getClassLoader().getResource("deadsmiley.png"));
+			deadsmiley= Icon.getImage();
+			Icon = new ImageIcon(getClass().getClassLoader().getResource("sunglassessmiley.png"));
+			sunglasses= Icon.getImage();
+			Icon = new ImageIcon(getClass().getClassLoader().getResource("displayone.png"));
+			displayone= Icon.getImage();
+			Icon = new ImageIcon(getClass().getClassLoader().getResource("displaytwo.png"));
+			displaytwo = Icon.getImage();
+			Icon = new ImageIcon(getClass().getClassLoader().getResource("displaythree.png"));
+			displaythree = Icon.getImage();
+			Icon = new ImageIcon(getClass().getClassLoader().getResource("displayfour.png"));
+			displayfour = Icon.getImage();
+			Icon = new ImageIcon(getClass().getClassLoader().getResource("displayfive.png"));
+			displayfive = Icon.getImage();
+			Icon = new ImageIcon(getClass().getClassLoader().getResource("displaysix.png"));
+			displaysix = Icon.getImage();
+			Icon = new ImageIcon(getClass().getClassLoader().getResource("displayseven.png"));
+			displayseven= Icon.getImage();
+			Icon = new ImageIcon(getClass().getClassLoader().getResource("displayeight.png"));
+			displayeight = Icon.getImage();
+			Icon = new ImageIcon(getClass().getClassLoader().getResource("displaynine.png"));
+			displaynine = Icon.getImage();
+			Icon = new ImageIcon(getClass().getClassLoader().getResource("displayzero.png"));
+			displayzero = Icon.getImage();
+			
 	}
 
 }
