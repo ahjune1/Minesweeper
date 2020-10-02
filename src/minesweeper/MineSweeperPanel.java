@@ -29,7 +29,7 @@ public class MineSweeperPanel extends JPanel {
 
 	int mineNum; // total number of mines
 
-	int gameState = 1; // 1 if ongoing, 2 if won, 0 if gameover
+	int gameState = 3; // 1 if ongoing, 2 if won, 0 if gameover, 3 if not started
 
 	int time = 0; // time in seconds elapsed from start
 
@@ -47,7 +47,6 @@ public class MineSweeperPanel extends JPanel {
 		createGrid(Math.max(Math.min(16, rows), 10), Math.max(Math.min(30, columns), 10), Math.max(Math.min(20, mines), 10));
 		setPreferredSize(new Dimension(mineGrid[0].length * SQ + H_PADDING * 2,mineGrid.length * SQ + TOP_PADDING + BOTTOM_PADDING));
 		setUpClickListener();
-		setUpTimer();
 	}
 
 	private void setUpClickListener() {
@@ -94,8 +93,7 @@ public class MineSweeperPanel extends JPanel {
 		t.stop();
 		time = 0;
 		flags = 0;
-		gameState = 1;
-		setUpTimer();
+		gameState = 3;
 	}
 
 
@@ -107,14 +105,17 @@ public class MineSweeperPanel extends JPanel {
 			resetGame();
 			repaint();
 		}
-		if (gameState != 1) {
+		if (gameState != 1 && gameState != 3) {
 			return;
 		}
 		if (click.getX() < H_PADDING || click.getY()<TOP_PADDING ||
 			click.getX() > this.getWidth()-H_PADDING ||
 			click.getY() > this.getHeight()-BOTTOM_PADDING)
 			return;
-		
+		if (gameState == 3) {
+			gameState = 1;
+			setUpTimer();
+		}
 		int col = (click.getX()-H_PADDING)/SQ;
 		int row = (click.getY()-TOP_PADDING)/SQ;
 		System.out.println("row: "+row+" col: "+col);
@@ -239,7 +240,7 @@ public class MineSweeperPanel extends JPanel {
 	@Override
 	public void paintComponent(Graphics g) {
 		super.paintComponent(g);
-		if (gameState == 1) {
+		if (gameState == 1 || gameState == 3) {
 			g.drawImage(this.smiley, (this.getWidth() / 2) - 20, 15, 40 ,40, null);
 		} else if (gameState == 2) {
 			g.drawImage(this.sunglasses, (this.getWidth() / 2) - 20, 15, 40 ,40, null);
